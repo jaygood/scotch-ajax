@@ -6,7 +6,6 @@ angular.module('phpFormApp')
     this.processForm = function(data){
       formService.process(data)
         .success(function(data) {
-            console.log(data);
             if (!data.success) {
               // if not successful, bind errors to error variables
                 $scope.errorName = data.errors.name;
